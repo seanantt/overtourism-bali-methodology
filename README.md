@@ -10,7 +10,7 @@ The research aims to analyze perceived overcrowding in Bali's top tourist destin
 Due to GitHub’s file size limitations, the full dataset and trained classification model are stored externally.
 
 🔗 **You can access them here:**  
-👉 [Google Drive – Dataset & Model Folder]((https://drive.google.com/drive/folders/1bhQX5fU_uv9-aiV4aWFHXsxi7UY0DI9c?usp=sharing))
+👉 [Google Drive – Dataset & Model Folder](https://drive.google.com/drive/folders/1bhQX5fU_uv9-aiV4aWFHXsxi7UY0DI9c?usp=sharing)
 
 This folder contains:
 - `cleaned_data_reviews.csv` – Cleaned review dataset after text preprocessing  
