@@ -17,3 +17,54 @@ This folder contains:
 - `predicted_review.xlsx` –  Predicted review dataset after text preprocessing  
 - `crowded_uncrowded_model` – Fine-tuned BERT model directory  
 
+
+## Methodology Workflow
+
+The study follows these steps:
+
+1. Data collection
+   - TripAdvisor reviews were scraped and georeferenced
+   - Tourism infrastructure data was obtained from OpenStreetMap
+
+2. Text preprocessing
+   - Cleaning, tokenization, stopword removal
+
+3. Text classification
+   - Fine-tuned BERT model used to classify reviews into "crowded" and "uncrowded"
+
+4. Spatial analysis
+   - KDE performed in QGIS (EPSG:32750)
+   - Radius:
+     - Crowding reviews: 5000 m
+     - Infrastructure: 5000 m
+   - Cell size: 100 m
+
+5. Spatial statistics
+   - Global Moran’s I (ArcGIS)
+   - LISA (ArcGIS)
+
+
+## Reproducibility
+
+To reproduce the results:
+
+1. Download dataset from Google Drive
+2. Load cleaned_data_reviews.xlsx
+3. Run classification model from /crowded_uncrowded_model
+4. Generate predicted labels (predicted_review.xlsx)
+5. Import data into QGIS
+6. Reproject to EPSG:32750
+7. Run Heatmap (KDE) with:
+   - Radius: 2000 meters
+   - Cell size: 100 meters
+8. Perform spatial autocorrelation in GeoDa
+
+
+
+## Software
+- QGIS 
+- ArcGIS Pro 
+- Python (Transformers / BERT)
+
+
+
